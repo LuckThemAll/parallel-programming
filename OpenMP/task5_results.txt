@@ -1,0 +1,16 @@
+===========================================================
+Intel Core i3-2350M 2.30 ГГц;
+
+Размер: 1024
+Threads in use: 4
+Time of execution ijk: 13.72800016403198242
+Time of execution ikj: 33.01599979400634766
+Time of execution jki: 0.79200005531311035
+Time of execution kji: 0.95200014114379883
+
+Размер: 512
+Threads in use: 2
+Time of execution ijk: 0.26200008392333984
+Time of execution ikj: 3.14600014686584473
+Time of execution jki: 0.08200001716613770
+Time of execution kji: 0.10599994659423828
