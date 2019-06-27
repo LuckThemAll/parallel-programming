@@ -3,25 +3,19 @@
 #include <vector>
 using namespace std;
 
-
-
 int main(int argc, char **argv)
 {
     MPI_Init(&argc, &argv);
     int rank, size;
     MPI_Comm_size(MPI_COMM_WORLD, &size);
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
-    int vector_size = 200000000;
+    int vector_size = 100000000;
     vector<int>vec_a(vector_size, 1);
     vector<int>vec_b(vector_size, 1);
-
-
     double start_time;
     if (rank == 0) {
         start_time = MPI_Wtime();
     }
-
-
     auto vec_size = vec_a.size();
     auto chunk_size = vec_a.size() / size;
 
@@ -42,8 +36,7 @@ int main(int argc, char **argv)
     if (rank == 0)
         cout << result << endl;
     if (rank == 0)
-        cout << "Time elapsed: " << MPI_Wtime() - start_time << endl;
-
+        cout << "Time spent: " << MPI_Wtime() - start_time << endl;
 
     MPI_Finalize();
 
